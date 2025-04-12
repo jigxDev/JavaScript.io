@@ -1,0 +1,274 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #101920;
+}
+.glowing {
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 200px;
+}
+
+.glowing span {
+    position: absolute;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.glow-effect {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    
+}
+
+.glowing span:nth-child(1) {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border: 2px solid rgba(0, 145, 255, 0.214);
+    background: conic-gradient(
+      rgba(0, 255, 255, 0.8) 0deg 70deg, 
+      transparent 70deg 100deg,
+      rgba(255, 46, 46, 0.8) 100deg 150deg,
+      transparent 150deg 210deg,
+      rgba(0, 255, 255, 0.8) 210deg 270deg,
+      transparent 270deg 310deg,
+      rgba(0, 255, 255, 0.8) 310deg 360deg
+    );
+    mask: radial-gradient(circle, transparent calc(70% - 3px), black calc(70% + 3px));
+    animation: animate 30s linear infinite;
+}
+
+.glow-effect:nth-child(2) {
+    position: absolute;
+    left: -1%;
+    top: 60px;
+    height: 15px;
+    width: 15px;
+    background-color: rgb(255, 157, 0);
+    box-shadow: 0 0 20px rgb(255, 157, 0, 1),
+                0 0 40px rgb(255, 157, 0, 1),
+                0 0 60px rgb(255, 157, 0, 1),
+                0 0 80px rgb(255, 157, 0, 1),
+                0 0 0 4px rgb(255, 157, 0, 0.1);
+    animation: expand 2s linear infinite;
+}
+
+.glow-effect:nth-child(2)::before, glow-effect:nth-child(2)::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    border: 3px solid #ffb84d;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: expandRing 2.5s infinite;
+    opacity: 0;
+}
+.glow-effect:nth-child(2)::after {
+    animation-delay: 1.25s;
+}
+
+.glowing span:nth-child(3) {
+    top: 15px;
+    bottom: 15px;
+    right: 15px;
+    left: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background: conic-gradient(
+      rgba(255, 145, 0, 0.811) 0deg 70deg, 
+      transparent 70deg 100deg,
+      rgba(0, 255, 255, 0.8) 100deg 150deg,
+      transparent 150deg 210deg,
+      rgba(0, 255, 255, 0.8) 210deg 270deg,
+      transparent 270deg 310deg,
+      rgba(255, 46, 46, 0.8) 310deg 360deg
+    );
+    mask: radial-gradient(circle, transparent calc(70% - 3px), black calc(70% + 3px));
+    animation: animate 30s linear infinite;
+}
+
+.glowing span:nth-child(4) {
+    top: 23px;
+    bottom: 23px;
+    right: 23px;
+    left: 23px;
+    border: 2px solid rgba(255, 0, 0, 0.1);
+    background: conic-gradient(
+      rgba(255, 145, 0, 0.811) 0deg 70deg, 
+      transparent 70deg 100deg,
+      rgba(255, 46, 46, 0.8) 100deg 150deg,
+      transparent 150deg 210deg,
+      rgba(0, 255, 255, 0.8) 210deg 270deg,
+      transparent 270deg 310deg,
+      rgba(255, 145, 0, 0.811) 310deg 360deg
+    );
+    mask: radial-gradient(circle, transparent calc(70% - 3px), black calc(70% + 3px));
+    animation: animate-reverse 30s linear infinite;
+}
+.glow-effect:nth-child(5) {
+    left: 75%;
+    top: 76%;
+    height: 16px;
+    width: 16px;
+    background-color: rgb(255, 67, 29);
+    box-shadow: 0 0 20px rgb(255, 67, 29, 1),
+                0 0 40px rgb(255, 67, 29, 1),
+                0 0 60px rgb(255, 67, 29, 1),
+                0 0 80px rgb(255, 67, 29, 1),
+                0 0 0 4px rgb(255, 67, 29, 0.1);
+}
+.glow-effect:nth-child(5)::before, glow-effect:nth-child(5)::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgb(255, 67, 29, 1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: expandRing 2.5s infinite;
+    opacity: 0;
+}
+.glow-effect:nth-child(5)::after {
+    animation-delay: 1.25s;
+}
+
+.glowing span:nth-child(6) {
+    top: 40px;
+    bottom: 40px;
+    right: 40px;
+    left: 40px;
+    border: 2px solid rgba(255, 0, 0, 0.1);
+    background: conic-gradient(
+      rgba(255, 46, 46, 0.8) 0deg 70deg, 
+      transparent 70deg 100deg,
+      rgba(0, 255, 255, 0.8) 100deg 150deg,
+      transparent 150deg 210deg,
+      rgba(255, 46, 46, 0.8) 210deg 270deg,
+      transparent 270deg 310deg,
+      rgba(0, 255, 255, 0.8) 310deg 360deg
+    );
+    mask: radial-gradient(circle, transparent calc(70% - 3px), black calc(70% + 3px));
+    animation: animate 30s linear infinite;
+}
+.glow-effect:nth-child(7) {
+    top: 28%;
+    left: 69%;
+    height: 13px;
+    width: 13px;
+    background-color: rgb(29, 255, 225);
+    box-shadow: 0 0 20px rgb(29, 255, 225, 1),
+                0 0 40px rgb(29, 255, 225, 1),
+                0 0 60px rgb(29, 255, 225, 1),
+                0 0 80px rgb(29, 255, 225, 1),
+                0 0 0 4px rgb(29, 255, 225, 0.1);
+}
+.glow-effect:nth-child(7)::before, glow-effect:nth-child(7)::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgb(29, 255, 225, 1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: expandRing 2.5s infinite;
+    opacity: 0;
+}
+.glow-effect:nth-child(7)::after {
+    animation-delay: 1.25s;
+}
+
+.glowing span:nth-child(8) {
+    top: 57px;
+    bottom: 57px;
+    right: 57px;
+    left: 57px;
+    border: 2px solid rgba(255, 94, 0, 0.1);
+    background: conic-gradient(
+      rgba(255, 145, 0, 0.811) 0deg 70deg, 
+      transparent 70deg 100deg,
+      rgba(255, 145, 0, 0.811) 100deg 150deg,
+      transparent 150deg 210deg,
+      rgba(255, 145, 0, 0.811) 210deg 270deg,
+      transparent 270deg 310deg,
+      rgba(255, 145, 0, 0.811) 310deg 360deg
+    );
+    mask: radial-gradient(circle, transparent calc(70% - 3px), black calc(70% + 3px));
+    animation: animate-reverse 30s linear infinite;
+}
+.glow-effect:nth-child(9) {
+    left: 36%;
+    top: 65%;
+    height: 8px;
+    width: 8px;
+    background-color: rgb(29, 180, 255);
+    box-shadow: 0 0 20px rgb(29, 180, 225, 1),
+                0 0 40px rgb(29, 180, 225, 1),
+                0 0 60px rgb(29, 180, 225, 1),
+                0 0 80px rgb(29, 180, 225, 1),
+                0 0 0 4px rgb(29, 180, 225, 0.1);
+}
+.glow-effect:nth-child(9)::before, glow-effect:nth-child(9)::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgb(29, 180, 225, 1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: expandRing 2.5s infinite;
+    opacity: 0;
+}
+.glow-effect:nth-child(9)::after {
+    animation-delay: 1.25s;
+}
+
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes animate-reverse {
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes expandRing {
+    0% {
+        width: 15px;
+        height: 15px;
+        opacity: 0.8;
+        border-width: 2px;
+      }
+      50% {
+        opacity: 0.4;
+      }
+      100% {
+        width: 30px;
+        height: 30px;
+        opacity: 0;
+        border-width: .1px;
+      }
+}
