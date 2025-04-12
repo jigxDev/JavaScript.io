@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="popup-overlay" id="winnerPopup">
+        <div class="popup">
+          <h2>🎉 Oh wow... Look who *won* 🙄</h2>
+          <div class="winner-name" id="winnerName">[Winner Name]</div>
+          <p class="sarcasm">Truly the hero we never asked for.</p>
+          <button class="reset-btn" onclick = resetGame()>Fine. Reset.</button>
+        </div>
+    </div>
+    <div class="popup-overlay" id="noWinnerPopup">
+        <div class="popup">
+          <h2>🎉 Yo Idiot's, Such a Shame🥱</h2>
+          <p class="sarcasm">Even NPC's are Better</p>
+          <button class="reset-btn" onclick = resetGame()>Ready For Another Round</button>
+        </div>
+    </div>
+    <div class="Board">
+        <div id="container" class="box"></div>
+        <div id="container" class="box"></div>
+        <div id="container" class="box"></div>
+        <div id="container" class="box"></div>
+        <div id="container" class="box"></div>
+        <div id="container" class="box"></div>
+        <div id="container" class="box"></div>
+        <div id="container" class="box"></div>
+        <div id="container" class="box"></div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
